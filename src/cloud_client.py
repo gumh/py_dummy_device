@@ -18,7 +18,7 @@ class CloudClient:
 
   async def send(self, data):
     if self.session != None:
-      self.logger.info(">" + json.dumps(data))
+      self.logger.info(">\n" + json.dumps(data, indent=2))
       await self.session.send(json.dumps(data))
 
   def reg_callback(self, cb):
@@ -38,7 +38,7 @@ class CloudClient:
             try:
               data = await asyncio.wait_for(self.session.recv(), 1)
               data = json.loads(data)
-              self.logger.info("<" + json.dumps(data, ensure_ascii=False))
+              self.logger.info("<\n" + json.dumps(data, ensure_ascii=False, indent=2))
               for cb in self.callbacks:
                 await cb(data)
             except asyncio.TimeoutError:

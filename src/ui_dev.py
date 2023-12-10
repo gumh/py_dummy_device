@@ -23,7 +23,7 @@ class ControlFrame(tk.Frame):
     self.last_heartbeat = datetime.fromtimestamp(0)
     self.last_pub_consumable = datetime.fromtimestamp(0)
 
-    self.timeout_login = 5
+    self.timeout_login = 20
     self.timeout_begin = 5
     self.timeout_end = 5
     self.timeout_heartbeat = 5

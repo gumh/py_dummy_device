@@ -1,3 +1,3 @@
-source /opt/py_dummy_device/pyenv/bin/activate
+# source /opt/py_dummy_device/pyenv/bin/activate
 
-export PYTHONPATH=/opt/py_dummy_device/src
+export PYTHONPATH=/home/daq/work/py_dummy_device/src

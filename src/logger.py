@@ -45,6 +45,7 @@ def create_logger(add_log):
   myh.setFormatter(formatter)
   myh.setLevel('INFO')
   logger.addHandler(myh)
+  logger.addHandler(fhlr)
   return logger
   #logger.addHandler(fhlr)
   
